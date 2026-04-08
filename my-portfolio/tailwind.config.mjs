@@ -6,7 +6,11 @@ export default {
     "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'f1-red': '#E10600', // Rouge officiel F1
+      },
+    },
   },
   plugins: [],
 };

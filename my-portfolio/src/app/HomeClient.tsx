@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from 'react';
-import Link from 'next/link'; // Import pour la navigation Next.js
+import Link from 'next/link';
 
 export default function HomeClient({ data, content }: { data: any, content: string }) {
   const glowRef = useRef<HTMLDivElement>(null);
@@ -18,51 +18,62 @@ export default function HomeClient({ data, content }: { data: any, content: stri
   return (
     <main className="relative min-h-screen w-full bg-black text-white flex flex-col items-center justify-center overflow-hidden font-sans">
       
-      {/* Navbar Flottante (Inspirée de React Bits) */}
-      <nav className="absolute top-8 z-50 flex items-center gap-8 px-6 py-3 bg-white/5 border border-white/10 rounded-full backdrop-blur-md">
-        <Link href="/" className="text-[11px] uppercase tracking-[0.2em] text-white font-bold hover:text-violet-400 transition-colors">Accueil</Link>
-        <Link href="/about" className="text-[11px] uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors">À Propos</Link>
-        <Link href="/projects" className="text-[11px] uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors">Projets</Link>
-        <Link href="/contact" className="text-[11px] uppercase tracking-[0.2em] text-gray-400 hover:text-white transition-colors">Contact</Link>
+      {/* NAVBAR FLOTTANTE - Style Glassmorphism */}
+      <nav className="fixed top-6 z-50 flex items-center gap-6 md:gap-10 px-8 py-3 bg-white/[0.03] border border-white/10 rounded-full backdrop-blur-xl shadow-2xl">
+        <Link href="/" className="text-[10px] uppercase tracking-[0.3em] text-white font-bold transition-all hover:text-violet-400">
+          Accueil
+        </Link>
+        <Link href="/about" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold transition-all hover:text-white">
+          À Propos
+        </Link>
+        <Link href="/projects" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold transition-all hover:text-white">
+          Projets
+        </Link>
+        <Link href="/contact" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold transition-all hover:text-white">
+          Contact
+        </Link>
       </nav>
 
-      {/* Lueur interactive */}
+      {/* LUEUR DYNAMIQUE - Plus douce pour l'UX */}
       <div 
         ref={glowRef}
-        className="fixed top-0 left-0 w-[600px] h-[600px] pointer-events-none z-0 -translate-x-1/2 -translate-y-1/2 transition-transform duration-150 ease-out opacity-25"
+        className="fixed top-0 left-0 w-[600px] h-[600px] pointer-events-none z-0 -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 ease-out opacity-25"
       >
         <div className="absolute inset-0 bg-violet-700 blur-[130px] rounded-full" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mt-20">
+      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl pt-12">
         
-        {/* Ton contenu actuel (Badge, Titre, Description, Bouton) */}
-        <div className="mb-12 px-5 py-2 border border-white/10 bg-white/5 rounded-full">
-          <span className="text-[10px] tracking-[0.4em] uppercase text-gray-400 font-bold">
-            Web@cadémie • Portfolio 2026
+        {/* BADGE CENTRAL */}
+        <div className="mb-10 px-5 py-2 border border-white/10 bg-white/5 rounded-full backdrop-blur-md transition-colors hover:border-white/20">
+          <span className="text-[9px] tracking-[0.5em] uppercase text-gray-400 font-black">
+            Web@cadémie • 2026
           </span>
         </div>
 
-        <h1 className="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-10 italic">
+        {/* TITRE - Impact visuel fort */}
+        <h1 className="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-10 italic drop-shadow-2xl">
           {data.title}
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-14 max-w-2xl">
+        {/* DESCRIPTION - Grisée pour la lisibilité */}
+        <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-14 max-w-2xl px-4">
           {content}
         </p>
 
+        {/* CTA - Bouton Pilule Blanc */}
         <Link 
           href="/projects" 
-          className="px-14 py-5 bg-white text-black font-black rounded-full hover:scale-105 transition-all shadow-xl active:scale-95"
+          className="px-14 py-5 bg-white text-black font-black rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.15)]"
         >
           Voir mes réalisations
         </Link>
       </div>
 
-      {/* Footer */}
-      <footer className="absolute bottom-10 w-full flex justify-between px-12 text-[10px] text-gray-600 tracking-[0.5em] uppercase font-bold">
-        <span>Antoine Allard</span>
-        <span>MMXXVI</span>
+      {/* FOOTER */}
+      <footer className="absolute bottom-10 w-full flex justify-between px-12 text-[9px] text-gray-600 tracking-[0.6em] uppercase font-black">
+        <span className="opacity-50 hover:opacity-100 transition-opacity">Antoine Allard</span>
+        <span className="opacity-50 hover:opacity-100 transition-opacity tracking-[0.8em]">MMXXVI</span>
       </footer>
     </main>
   );
