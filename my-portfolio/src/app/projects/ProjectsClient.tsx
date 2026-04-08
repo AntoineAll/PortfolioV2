@@ -110,7 +110,7 @@ export default function ProjectsClient({ projects }: { projects: any[] }) {
           <div className="relative w-full max-w-2xl bg-[#0a0a0a] border-l-8 border-violet-600 p-10 md:p-14 shadow-[0_0_100px_rgba(139,92,246,0.15)] animate-in slide-in-from-bottom-10 duration-500">
             <button 
               onClick={() => setSelectedProject(null)}
-              className="absolute top-8 right-8 text-xs font-black tracking-widest text-white/40 hover:text-white transition-colors"
+              className="absolute top-8 right-8 text-xs font-black tracking-widest text-[#e10600] hover:text-white transition-colors"
             >
               [ FERMER X ]
             </button>
