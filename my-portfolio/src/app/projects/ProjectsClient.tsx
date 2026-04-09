@@ -31,7 +31,7 @@ export default function ProjectsClient({ projects }: { projects: any[] }) {
   }, []);
 
   return (
-    <main className="min-h-screen w-full bg-black text-white pt-32 pb-40 px-4 md:px-10 font-sans italic uppercase overflow-hidden relative">
+    <main className="min-h-screen w-full bg-black text-white pt-32 pb-40 px-4 md:px-10 font-sans uppercase overflow-hidden relative">
       
       {/* LUEUR VIOLETTE DYNAMIQUE (Thème Home) */}
       <div 
@@ -49,7 +49,7 @@ export default function ProjectsClient({ projects }: { projects: any[] }) {
         <Link href="/about" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold transition-all hover:text-white">
           À Propos
         </Link>
-        <Link href="/projects" className="text-[10px] uppercase tracking-[0.3em] text-white font-black transition-all hover:text-violet-400">
+        <Link href="/projects" className="text-[10px] uppercase tracking-[0.3em] text-white font-bold transition-all hover:text-violet-400">
           Projets
         </Link>
         <Link href="/contact" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold transition-all hover:text-white">

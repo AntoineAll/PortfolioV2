@@ -27,10 +27,10 @@ export default function AboutClient({ data }: { data: any }) {
       </div>
 
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-6 md:gap-10 px-8 py-3 bg-white/[0.03] border border-white/10 rounded-full backdrop-blur-xl shadow-2xl font-bold">
-        <Link href="/" className="text-[10px] tracking-[0.3em] text-gray-400 hover:text-white transition-all">Accueil</Link>
-        <Link href="/about" className="text-[10px] tracking-[0.3em] text-white font-black hover:text-violet-400">À Propos</Link>
-        <Link href="/projects" className="text-[10px] tracking-[0.3em] text-gray-400 hover:text-white transition-all">Projets</Link>
-        <Link href="/contact" className="text-[10px] tracking-[0.3em] text-gray-400 hover:text-white transition-all">Contact</Link>
+        <Link href="/" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold hover:text-white transition-all">Accueil</Link>
+        <Link href="/about" className="text-[10px] uppercase tracking-[0.3em] text-white font-bold hover:text-violet-400 transition-all">À Propos</Link>
+        <Link href="/projects" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold hover:text-white transition-all">Projets</Link>
+        <Link href="/contact" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold hover:text-white transition-all">Contact</Link>
       </nav>
 
       <div className="relative z-10 max-w-6xl mx-auto">
