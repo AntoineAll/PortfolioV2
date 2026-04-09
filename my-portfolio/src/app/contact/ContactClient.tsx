@@ -80,7 +80,7 @@ export default function ContactClient({ data }: { data: any }) {
           
           {[
             { label: 'EMAIL', val: data.email, icon: <EmailIcon />, color: 'hover:border-blue-500', accent: 'bg-blue-500' },
-            { label: 'LINKEDIN', val: 'antoine-allard', icon: <LinkedInIcon />, color: 'hover:border-white', accent: 'bg-white', url: data.linkedin_url },
+            { label: 'LINKEDIN', val: 'Antoine A. Allard', icon: <LinkedInIcon />, color: 'hover:border-white', accent: 'bg-white', url: data.linkedin_url },
             { label: 'GITHUB', val: 'AntoineAll', icon: <GitHubIcon />, color: 'hover:border-[#e10600]', accent: 'bg-[#e10600]', url: data.github_url }
           ].map((link, i) => (
             <a 
