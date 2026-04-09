@@ -36,8 +36,10 @@ export default function ContactClient({ data }: { data: any }) {
            style={{ backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`, backgroundSize: '50px 50px' }} />
 
       {/* LUEUR AMBIANTE */}
-      <div ref={glowRef} className="fixed top-0 left-0 w-[600px] h-[600px] pointer-events-none z-0 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out opacity-20">
-        <div className="absolute inset-0 bg-[#e10600]/20 blur-[150px] rounded-full" />
+      <div 
+        ref={glowRef}
+        className="fixed top-0 left-0 w-[600px] h-[600px] pointer-events-none z-0 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out opacity-20">
+        <div className="absolute inset-0 bg-violet-700 blur-[130px] rounded-full" />
       </div>
 
       {/* NAVBAR RÉPARÉE */}
