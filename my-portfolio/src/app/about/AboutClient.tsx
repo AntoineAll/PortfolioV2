@@ -123,6 +123,12 @@ export default function AboutClient({ data }: { data: any }) {
 
         </div>
       </div>
+
+      {/* FOOTER */}
+      <footer className="absolute bottom-10 w-full flex justify-between px-12 text-[9px] text-gray-600 tracking-[0.6em] uppercase font-black">
+        <span className="opacity-50 hover:opacity-100 transition-opacity">Antoine Allard</span>
+        <span className="opacity-50 hover:opacity-100 transition-opacity tracking-[0.8em]">MMXXVI</span>
+      </footer>
     </main>
   );
 }

@@ -104,13 +104,13 @@ export default function ContactClient({ data }: { data: any }) {
           ))}
 
         </div>
-
-        {/* DÉCORATION FINALE */}
-        <div className="mt-32 opacity-10">
-            <div className="w-px h-24 bg-gradient-to-b from-[#e10600] to-transparent" />
-        </div>
-
       </div>
+
+      {/* FOOTER */}
+      <footer className="absolute bottom-10 w-full flex justify-between px-12 text-[9px] text-gray-600 tracking-[0.6em] uppercase font-black">
+        <span className="opacity-50 hover:opacity-100 transition-opacity">Antoine Allard</span>
+        <span className="opacity-50 hover:opacity-100 transition-opacity tracking-[0.8em]">MMXXVI</span>
+      </footer>
     </main>
   );
 }
