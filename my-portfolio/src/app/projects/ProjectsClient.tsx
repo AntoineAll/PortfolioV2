@@ -49,7 +49,7 @@ export default function ProjectsClient({ projects }: { projects: any[] }) {
         <Link href="/about" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold transition-all hover:text-white">
           À Propos
         </Link>
-        <Link href="/projects" className="text-[10px] uppercase tracking-[0.3em] text-white font-black transition-all">
+        <Link href="/projects" className="text-[10px] uppercase tracking-[0.3em] text-white font-black transition-all hover:text-violet-400">
           Projets
         </Link>
         <Link href="/contact" className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold transition-all hover:text-white">
@@ -126,7 +126,7 @@ export default function ProjectsClient({ projects }: { projects: any[] }) {
                 <p className="text-xl font-bold tracking-tight text-white">{selectedProject.technos}</p>
               </div>
               <div>
-                <h3 className="text-white/30 text-[9px] font-black tracking-widest mb-3 uppercase">Contexte & Objectif</h3>
+                <h3 className="text-white/80 text-[9px] font-black tracking-widest mb-3 uppercase">Contexte & Objectif</h3>
                 <p className="not-italic text-gray-400 normal-case leading-relaxed text-base md:text-lg text-pretty">
                   {selectedProject.context || selectedProject.objective}
                 </p>
@@ -138,7 +138,7 @@ export default function ProjectsClient({ projects }: { projects: any[] }) {
                 VOIR LE CODE
               </a>
               {selectedProject.github_pages && (
-                <a href={selectedProject.github_pages} target="_blank" className="flex-1 bg-violet-600 py-5 text-center text-xs font-black hover:bg-violet-500 transition-all duration-300 shadow-lg shadow-violet-900/20">
+                <a href={selectedProject.github_pages} target="_blank" className="flex-1 bg-violet-600 py-5 text-center text-xs font-black hover:bg-[#e10600] transition-all duration-300 shadow-lg shadow-violet-900/20">
                   LANCER LA DÉMO
                 </a>
               )}
