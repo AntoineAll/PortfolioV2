@@ -34,7 +34,7 @@ export default function ProjectsClient({ projects }: { projects: any[] }) {
     <main className="min-h-screen w-full bg-black text-white pt-32 pb-40 px-4 md:px-10 font-sans uppercase overflow-hidden relative">
 
       {/* GRILLE DE FOND DYNAMIQUE */}
-      <div className="fixed inset-0 z-0 opacity-[0.05] pointer-events-none" 
+      <div className="fixed inset-0 z-0 opacity-[0.10] pointer-events-none" 
            style={{ backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`, backgroundSize: '50px 50px' }} />
       
       {/* LUEUR VIOLETTE DYNAMIQUE (Thème Home) */}
@@ -81,9 +81,9 @@ export default function ProjectsClient({ projects }: { projects: any[] }) {
               }`}
             >
               {/* Crochet F1 - Blanc pur pour le contraste */}
-              <div className="absolute -left-4 -top-4 w-[110%] h-[120%] border-l-2 border-t-2 border-white/20 pointer-events-none group-hover:border-violet-500 transition-colors duration-500" />
+              <div className="absolute -left-4 -top-4 w-[110%] h-[120%] border-l-2 border-t-2 border-white/100 pointer-events-none group-hover:border-violet-500 transition-colors duration-500" />
               
-              <div className="absolute -top-10 left-0 text-lg font-black text-white/40 tracking-tighter group-hover:text-violet-400 transition-colors">
+              <div className="absolute -top-10 left-0 text-lg font-black text-[#e10600] tracking-tighter group-hover:text-violet-400 transition-colors">
                 P{index + 1}
               </div>
 
