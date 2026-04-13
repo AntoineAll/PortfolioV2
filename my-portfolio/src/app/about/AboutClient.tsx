@@ -66,7 +66,7 @@ export default function AboutClient({ data }: { data: any }) {
               <h2 className="text-violet-400 text-[11px] font-black tracking-[0.4em] mb-6">Intérêts</h2>
               <div className="space-y-3">
                 {data.interets.map((item: string, i: number) => (
-                  <div key={i} className="flex items-center gap-4 bg-white/[0.02] p-4 border border-white/5 group hover:border-violet-500/30 transition-all">
+                  <div key={i} className="flex items-center gap-4 bg-white/[0.05] p-4 border border-white/5 group hover:border-violet-500/50 transition-all">
                     <div className="w-1.5 h-4 bg-[#e10600] skew-x-[-20deg] shadow-[0_0_8px_#e10600]" />
                     <span className="text-[11px] font-black tracking-wider text-gray-300 group-hover:text-white">{item}</span>
                   </div>
@@ -116,8 +116,8 @@ export default function AboutClient({ data }: { data: any }) {
             </section>
 
             <section className="p-8 bg-white/[0.02] border-l-4 border-violet-600 backdrop-blur-sm">
-              <h2 className="text-white text-[11px] font-black tracking-[0.4em] mb-6">Qualités</h2>
-              <p className="text-[13px] text-gray-400 normal-case leading-relaxed font-medium text-pretty">{data.competences.qualites}</p>
+              <h2 className="text-violet-600 text-[11px] font-black tracking-[0.4em] mb-6">Qualités</h2>
+              <p className="text-[13px] text-white-100 normal-case leading-relaxed font-medium text-pretty">{data.competences.qualites}</p>
             </section>
           </div>
 
