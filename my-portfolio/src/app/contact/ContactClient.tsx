@@ -106,6 +106,9 @@ export default function ContactClient({ data }: { data: any }) {
         </div>
       </div>
 
+      {/* Ligne de rappel rouge F1 */}
+          <div className="h-1.5 w-64 bg-[#e10600] mx-auto mt-25 shadow-[0_0_15px_rgba(225,6,0,0.5)]" />
+
       {/* FOOTER */}
       <footer className="absolute bottom-10 w-full flex justify-between px-12 text-[9px] text-gray-600 tracking-[0.6em] uppercase font-black">
         <span className="opacity-50 hover:opacity-100 transition-opacity">Antoine Allard</span>
