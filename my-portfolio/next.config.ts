@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Active l'exportation statique pour générer le dossier /out
   output: 'export',
+  basePath: '/PortfolioV2', 
   images: {
     unoptimized: true,
   },
