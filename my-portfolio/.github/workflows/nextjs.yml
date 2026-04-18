@@ -30,19 +30,19 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        # On force npm install dans le sous-dossier spécifique
+        # On force npm install dans le dossier my-portfolio
         run: npm install
         working-directory: ./my-portfolio
 
       - name: Build with Next.js
-        # On force le build dans le sous-dossier spécifique
+        # On force le build dans le dossier my-portfolio
         run: npx next build
         working-directory: ./my-portfolio
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # On récupère le dossier out généré par Next.js
+          # On récupère le dossier d'exportation statique
           path: ./my-portfolio/out
 
   deploy:
