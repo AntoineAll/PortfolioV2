@@ -108,7 +108,7 @@ export default function AboutClient({ data }: { data: any }) {
               <h2 className="text-violet-400 text-[11px] font-black tracking-[0.4em] mb-8">Stack Technique</h2>
               <div className="flex flex-wrap gap-2">
                 {data.competences.techniques.split(',').map((tech: string, i: number) => (
-                  <span key={i} className="text-[10px] bg-white/[0.05] border border-white/10 px-4 py-2.5 font-black italic hover:bg-violet-600 hover:text-white hover:border-violet-400 transition-all cursor-default tracking-tighter">
+                  <span key={i} className="text-[11px] bg-white/[0.1] border border-white/10 px-4 py-2.5 font-black italic hover:bg-violet-600 hover:text-white hover:border-violet-400 transition-all cursor-default tracking-tighter">
                     {tech.trim()}
                   </span>
                 ))}
