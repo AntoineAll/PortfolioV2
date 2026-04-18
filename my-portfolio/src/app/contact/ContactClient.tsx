@@ -58,7 +58,7 @@ export default function ContactClient({ data }: { data: any }) {
           
           <div className="relative w-28 h-28 border border-white/10 rounded-full flex items-center justify-center bg-black shadow-[0_0_40px_rgba(0,0,0,0.8)] transition-transform duration-500 group-hover:scale-110">
              <Image 
-                src="/logo_AAA.jpg" 
+                src="/PortfolioV2/logo_AAA.jpg" 
                 alt="Logo AAA" 
                 width={70} 
                 height={70} 
