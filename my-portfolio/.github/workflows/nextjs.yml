@@ -17,63 +17,32 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Définit le dossier my-portfolio comme racine pour toutes les commandes 'run'
-    defaults:
-      run:
-        working-directory: ./my-portfolio
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
-          if [ -f "${{ github.workspace }}/my-portfolio/yarn.lock" ]; then
-            echo "manager=yarn" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
-            echo "runner=yarn" >> $GITHUB_OUTPUT
-            exit 0
-          elif [ -f "${{ github.workspace }}/my-portfolio/package.json" ]; then
-            echo "manager=npm" >> $GITHUB_OUTPUT
-            echo "command=ci" >> $GITHUB_OUTPUT
-            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-            exit 0
-          else
-            echo "Unable to determine package manager"
-            exit 1
-          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: ./my-portfolio/package-lock.json
-
+          # On retire le cache automatique temporairement pour stabiliser le build
+          
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
-
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            my-portfolio/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('my-portfolio/package-lock.json', 'my-portfolio/yarn.lock') }}-${{ hashFiles('my-portfolio/**.[jt]s', 'my-portfolio/**.[jt]sx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('my-portfolio/package-lock.json', 'my-portfolio/yarn.lock') }}-
 
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        # On force le dossier de travail ici
+        run: npm install
+        working-directory: ./my-portfolio
 
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: npx next build
+        working-directory: ./my-portfolio
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # On pointe vers le dossier 'out' à l'intérieur de 'my-portfolio'
+          # C'est ici que l'artifact est récupéré pour le déploiement
           path: ./my-portfolio/out
 
   deploy:
