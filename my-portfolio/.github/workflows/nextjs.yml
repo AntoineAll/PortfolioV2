@@ -25,24 +25,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          # On retire le cache automatique temporairement pour stabiliser le build
-          
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        # On force le dossier de travail ici
+        # On force npm install dans le sous-dossier spécifique
         run: npm install
         working-directory: ./my-portfolio
 
       - name: Build with Next.js
+        # On force le build dans le sous-dossier spécifique
         run: npx next build
         working-directory: ./my-portfolio
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # C'est ici que l'artifact est récupéré pour le déploiement
+          # On récupère le dossier out généré par Next.js
           path: ./my-portfolio/out
 
   deploy:
