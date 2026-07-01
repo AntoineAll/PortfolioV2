@@ -34,7 +34,7 @@ experiences:
 
 # Tableau 3: Compétences
 competences:
-  techniques: "C, Python, HTML / CSS, Javascript, React, Next, PHP, Laravel, Docker, SQL, Java, Fastify, Drizzle ORM, Github"
+  techniques: "C, Python, HTML / CSS, Tailwind CSS, Javascript, React, Next, MERN, N8N, PHP, Laravel, Docker, SQL, Java, Fastify, Drizzle ORM, Github"
   qualites: "Assiduité, Esprit d'équipe, Aisance orale, Rigueur analytique"
 
 # Tableau 4: Centres d'intérêt
